@@ -1,4 +1,4 @@
-﻿using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
@@ -17,7 +17,7 @@ namespace MyBotConversational.Dialog
         protected readonly ILogger Logger;
 
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(CitaVetRecognizer cluRecognizer, RegistroCitaDialog registroCitaDialog, ILogger<MainDialog> logger)
+        public MainDialog(CitaVetRecognizer cluRecognizer, RegistroCitaDialog registroCitaDialog,CancelacionCitaDialog cancelacionCitaDialog,VistaCitaDialog vistaCitaDialog, ILogger<MainDialog> logger)
             : base(nameof(MainDialog))
         {
             _cluRecognizer = cluRecognizer;
@@ -25,6 +25,8 @@ namespace MyBotConversational.Dialog
 
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(registroCitaDialog);
+            AddDialog(cancelacionCitaDialog);
+            AddDialog(vistaCitaDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
@@ -85,9 +87,7 @@ namespace MyBotConversational.Dialog
                     // We haven't implemented the GetWeatherDialog so we just display a TODO message.
                     var verCitaDetalles = new CitaVDetalles()
                     {
-                        animal = cluResult.Entities.GetMascota(),
-                        tipocita = cluResult.Entities.GetIdCita(),
-                        nombre = cluResult.Entities.GetFechaSinFormato(),
+                        idcita = cluResult.Entities.GetIdCita(),
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
@@ -97,9 +97,7 @@ namespace MyBotConversational.Dialog
                     // We haven't implemented the GetWeatherDialog so we just display a TODO message.
                     var cancelarCitaDetalles = new CitaCDetalles()
                     {
-                        animal = cluResult.Entities.GetMascota(),
-                        tipocita = cluResult.Entities.GetIdCita(),
-                        nombre = cluResult.Entities.GetFechaSinFormato(),
+                        idcita = cluResult.Entities.GetIdCita(),
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
