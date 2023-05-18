@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 //
 // Generated with Bot Builder V4 SDK Template for Visual Studio EmptyBot v4.18.1
@@ -53,6 +53,10 @@ namespace MyBotConversational
 
             // Register the BookingDialog.
             services.AddSingleton<RegistroCitaDialog>();
+
+            services.AddSingleton<CancelacionCitaDialog>();
+
+            services.AddSingleton<VistaCitaDialog>();
 
             // The MainDialog that will be run by the bot.
             services.AddSingleton<MainDialog>();
