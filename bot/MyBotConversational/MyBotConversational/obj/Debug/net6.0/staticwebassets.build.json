@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "/4fjwUd4yIXlyekJRrod2shlhkKUu1bdLFsd6vc2hbQ=",
+  "Source": "MyBotConversational",
+  "BasePath": "_content/MyBotConversational",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyBotConversational\\wwwroot",
+      "Source": "MyBotConversational",
+      "ContentRoot": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "BasePath": "_content/MyBotConversational",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
+      "SourceId": "MyBotConversational",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "BasePath": "_content/MyBotConversational",
+      "RelativePath": "default.htm",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.htm"
+    }
+  ]
+}
