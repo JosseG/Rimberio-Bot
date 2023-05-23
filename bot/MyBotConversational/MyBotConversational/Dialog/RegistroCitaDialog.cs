@@ -9,6 +9,7 @@ namespace MyBotConversational.Dialog
 {
     public class RegistroCitaDialog : CancelAndHelpDialog
     {
+        private const string IntroStepMsgText = "Escogio la intención de registrar cita";
         private const string FechaSinFormatoStepMsgText = "¿Cual es la fecha sin formato?";
         private const string MascotaStepMsgText = "¿Que mascota va a traer?";
         private const string IdCitaStepMsgText = "¿Cual es el tipo de servicio?";
@@ -22,6 +23,7 @@ namespace MyBotConversational.Dialog
             AddDialog(new DateResolverDialog());
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
+                IntroStepAsync,
                 NombreStepAsync,
                 AnimalStepAsync,
                 TipoCitaStepAsync,
@@ -32,6 +34,15 @@ namespace MyBotConversational.Dialog
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
+        }
+
+
+        private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
+            await stepContext.Context.SendActivityAsync(message, cancellationToken);
+
+            return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
 
         private async Task<DialogTurnResult> NombreStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)

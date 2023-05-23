@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/4fjwUd4yIXlyekJRrod2shlhkKUu1bdLFsd6vc2hbQ=",
+  "Hash": "4kO97jOfRhJJ0DGsUCH8jRhVxUFYXH4ZfT3wADv79k0=",
   "Source": "MyBotConversational",
   "BasePath": "_content/MyBotConversational",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyBotConversational\\wwwroot",
       "Source": "MyBotConversational",
-      "ContentRoot": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
       "BasePath": "_content/MyBotConversational",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
+      "Identity": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
       "SourceId": "MyBotConversational",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
       "BasePath": "_content/MyBotConversational",
       "RelativePath": "default.htm",
       "AssetKind": "All",

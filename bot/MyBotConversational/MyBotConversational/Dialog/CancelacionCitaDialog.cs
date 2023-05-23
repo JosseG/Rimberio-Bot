@@ -18,7 +18,7 @@ namespace MyBotConversational.Dialog
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
-                //IntroStepAsync,
+                IntroStepAsync,
                 IdStepAsync,
                 ConfirmStepAsync,
                 FinalStepAsync,

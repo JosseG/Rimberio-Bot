@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {}
+    "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {
+    "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
+        "projectUniqueName": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
         "projectName": "MyBotConversational",
-        "projectPath": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
+        "projectPath": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
         "packagesPath": "C:\\Users\\Jose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\obj\\",
+        "outputPath": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jose\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CrRt6q9eD8SAJbLiHXfwIuZOM6Rbe78H9CBgO/0iq4OckTAD1TwpvHZXOOK9sKvUbungf4UmgVesheZf9TOH5g==",
+  "dgSpecHash": "63qn5KFE2gXoxjz/Wki7CqUoAfQiO/dcmPwfe3FH5QcO5BpBwhzXuB7F8Dz87sAZfIvQjRwCTjL+vSPrBoc/Cg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jose\\source\\repos\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
+  "projectFilePath": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jose\\.nuget\\packages\\azure.ai.language.conversations\\1.0.0\\azure.ai.language.conversations.1.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

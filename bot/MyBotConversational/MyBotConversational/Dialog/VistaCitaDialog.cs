@@ -8,7 +8,7 @@ namespace MyBotConversational.Dialog
 {
     public class VistaCitaDialog : CancelAndHelpDialog
     {
-
+        private const string IntroStepMsgText = "Escogio la intención de ver cita";
         private const string IdStepMsgText = "¿Cual es el id de la reserva o cita para su consulta?";
 
         public VistaCitaDialog()
@@ -18,6 +18,7 @@ namespace MyBotConversational.Dialog
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
+                IntroStepAsync,
                 NombreStepAsync,
                 ConfirmStepAsync,
                 FinalStepAsync,
@@ -25,6 +26,14 @@ namespace MyBotConversational.Dialog
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
+        }
+
+        private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
+            await stepContext.Context.SendActivityAsync(message, cancellationToken);
+
+            return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
 
         private async Task<DialogTurnResult> NombreStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
