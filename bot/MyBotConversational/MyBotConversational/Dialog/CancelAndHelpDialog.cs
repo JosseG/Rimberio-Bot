@@ -38,14 +38,14 @@ namespace MyBotConversational.Dialog
 
                 switch (text)
                 {
-                    case "help":
+                    case "ayuda":
                     case "?":
                         var helpMessage = MessageFactory.Text(HelpMsgText, HelpMsgText, InputHints.ExpectingInput);
                         await innerDc.Context.SendActivityAsync(helpMessage, cancellationToken);
                         return new DialogTurnResult(DialogTurnStatus.Waiting);
 
-                    case "cancel":
-                    case "quit":
+                    case "cancelar":
+                    case "salir":
                         var cancelMessage = MessageFactory.Text(CancelMsgText, CancelMsgText, InputHints.IgnoringInput);
                         await innerDc.Context.SendActivityAsync(cancelMessage, cancellationToken);
                         return await innerDc.CancelAllDialogsAsync(cancellationToken);

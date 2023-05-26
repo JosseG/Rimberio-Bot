@@ -17,7 +17,7 @@ namespace MyBotConversational.Dialog
         protected readonly ILogger Logger;
 
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(CitaVetRecognizer cluRecognizer, RegistroCitaDialog registroCitaDialog,CancelacionCitaDialog cancelacionCitaDialog,VistaCitaDialog vistaCitaDialog, ILogger<MainDialog> logger)
+        public MainDialog(CitaVetRecognizer cluRecognizer, RegistroCitaDialog registroCitaDialog,CancelacionCitaDialog cancelacionCitaDialog,VistaCitaDialog vistaCitaDialog,GptDialog gptDialog, ILogger<MainDialog> logger)
             : base(nameof(MainDialog))
         {
             _cluRecognizer = cluRecognizer;
@@ -27,6 +27,7 @@ namespace MyBotConversational.Dialog
             AddDialog(registroCitaDialog);
             AddDialog(cancelacionCitaDialog);
             AddDialog(vistaCitaDialog);
+            AddDialog(gptDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
@@ -111,10 +112,9 @@ namespace MyBotConversational.Dialog
                     break;
                 default:
                     // Catch all for unhandled intents
-                    var didntUnderstandMessageText = $"Lo siento, no entendí eso. Intente preguntar de otra manera (la intención era {cluResult.GetTopIntent().intent})";
-                    var didntUnderstandMessage = MessageFactory.Text(didntUnderstandMessageText, didntUnderstandMessageText, InputHints.IgnoringInput);
-                    await stepContext.Context.SendActivityAsync(didntUnderstandMessage, cancellationToken);
-                    break;
+                    string objeto = (string)stepContext.Result;
+
+                    return await stepContext.BeginDialogAsync(nameof(GptDialog), objeto);
             }
 
             return await stepContext.NextAsync(null, cancellationToken);
