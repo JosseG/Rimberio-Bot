@@ -13,7 +13,7 @@
       "spacing": "medium",
       "size": "default",
       "weight": "bolder",
-      "text": "Bienvenido a la veterinaria NNNNIIIII",
+      "text": "Bienvenido a la veterinaria RIMBERIO",
       "wrap": true,
       "maxLines": 0
     },
@@ -21,7 +21,7 @@
       "type": "TextBlock",
       "size": "default",
       "isSubtle": true,
-      "text": "Veterinaria NNNNNNN",
+      "text": "Veterinaria RIMBERIO",
       "wrap": true,
       "maxLines": 0
     }

@@ -11,8 +11,8 @@ namespace MyBotConversational.Dialog
 {
     public class CancelAndHelpDialog : ComponentDialog
     {
-        private const string HelpMsgText = "Show help here";
-        private const string CancelMsgText = "Cancelling...";
+        private const string HelpMsgText = "Ayuda";
+        private const string CancelMsgText = "Cancelando acción";
 
         public CancelAndHelpDialog(string id)
             : base(id)

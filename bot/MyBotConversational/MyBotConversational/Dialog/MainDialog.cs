@@ -51,7 +51,7 @@ namespace MyBotConversational.Dialog
 
             // Use the text provided in FinalStepAsync or the default if it is the first time.
             var weekLaterDate = DateTime.Now.AddDays(7).ToString("MMMM d, yyyy");
-            var messageText = stepContext.Options?.ToString() ?? $"¿En que te puedo ayudar?\n Tenemos los servicios de registro,vista y consulta de información general";
+            var messageText = stepContext.Options?.ToString() ?? $"¿En que te puedo ayudar?\n Tenemos los servicios de registro de cita y consulta general a través del modelo de texto GPT";
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
         }
@@ -75,10 +75,7 @@ namespace MyBotConversational.Dialog
                     // Initialize BookingDetails with any entities we may have found in the response.
                     var citaRDetalles = new CitaRDetalles()
                     {
-                        animal = cluResult.Entities.GetMascota(),
-                        tipocita = cluResult.Entities.GetIdCita(),
-                        nombre = cluResult.Entities.GetFechaSinFormato(),
-                        fecha = cluResult.Entities.GetFechaCita(),
+
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.

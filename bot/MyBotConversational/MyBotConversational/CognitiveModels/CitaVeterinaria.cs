@@ -22,6 +22,7 @@ namespace MyBotConversational.CognitiveModels
             cancelarCita,
             verCita,
             Salir,
+            mostrarInformacion,
             None
         }
 
