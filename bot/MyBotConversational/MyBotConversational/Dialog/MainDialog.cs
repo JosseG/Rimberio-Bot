@@ -110,7 +110,7 @@ namespace MyBotConversational.Dialog
                 default:
                     // Catch all for unhandled intents
                     string objeto = (string)stepContext.Result;
-
+                    string pruebaVarSinInicializar;
                     return await stepContext.BeginDialogAsync(nameof(GptDialog), objeto);
             }
 
