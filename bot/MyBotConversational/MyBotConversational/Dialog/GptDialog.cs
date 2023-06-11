@@ -38,6 +38,7 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {            
+            string otraVariableSinInic;
 
             string message = (string)stepContext.Options;
 
