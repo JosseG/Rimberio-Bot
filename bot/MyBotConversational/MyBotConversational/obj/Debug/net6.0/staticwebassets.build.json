@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4kO97jOfRhJJ0DGsUCH8jRhVxUFYXH4ZfT3wADv79k0=",
+  "Hash": "MqPYTnaFaKLyxJA1B+80smmIYijULv35DV/UFMhHxSs=",
   "Source": "MyBotConversational",
   "BasePath": "_content/MyBotConversational",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyBotConversational\\wwwroot",
       "Source": "MyBotConversational",
-      "ContentRoot": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Jose\\Desktop\\Cibertec-Ciclo-6\\Proyecto Integrador\\Proyecto\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
       "BasePath": "_content/MyBotConversational",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
+      "Identity": "C:\\Users\\Jose\\Desktop\\Cibertec-Ciclo-6\\Proyecto Integrador\\Proyecto\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
       "SourceId": "MyBotConversational",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Jose\\Desktop\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Jose\\Desktop\\Cibertec-Ciclo-6\\Proyecto Integrador\\Proyecto\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\",
       "BasePath": "_content/MyBotConversational",
       "RelativePath": "default.htm",
       "AssetKind": "All",

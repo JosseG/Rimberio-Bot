@@ -15,6 +15,9 @@ using System.Text;
 using System.Text.Json;
 using System.Net;
 using System.Collections.Generic;
+using Microsoft.Bot.Builder.Dialogs.Choices;
+using System.Linq;
+using System.Collections;
 
 namespace MyBotConversational.Dialog
 {
@@ -25,6 +28,7 @@ namespace MyBotConversational.Dialog
 
         private const string IntroStepMsgText = "Escogio la intención de registrar cita";
         private const string CodigoUsuarioStepMsgText = "¿Cual es su código de usuario?";
+        private const string TokenStepMsgText = "Fue enviado un token a su bandeja de correo, inserte su token en el siguiente mensaje";
         private const string MascotaStepMsgText = "¿Que mascota va a traer?";
 
         public RegistroCitaDialog(HttpClient httpClient)
@@ -34,12 +38,15 @@ namespace MyBotConversational.Dialog
             this._httpClient = httpClient;
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
+            AddDialog(new ChoicePrompt(nameof(ChoicePrompt)));
             AddDialog(new DateResolverDialog());
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
                 IdUsuarioStepAsync,
                 VerifyIdUsuarioStepAsync,
+                TokenStepAsync,
+                VerifyTokenStepAsync,
                 AnimalStepAsync,
                 ServiciosInfoStepAsync,
                 FechaStepAsync,
@@ -67,31 +74,6 @@ namespace MyBotConversational.Dialog
 
 
 
-
-
-            /* _httpClient.BaseAddress = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}");
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-
-            using HttpResponseMessage response = await _httpClient.GetAsync(_httpClient.BaseAddress);
-
-            var content = await ValidateContent(response).ReadAsStringAsync();
-
-            Usuario usuario = JsonSerializer.Deserialize<Usuario>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-
-            /*Usuario usuario = await _httpClient.GetFromJsonAsync<Usuario>(_httpClient.BaseAddress);*/
-
-            /*if (usuario != null)
-            {
-                citaRDetalles.idUsuario = usuario.codigo;
-                Debug.WriteLine("1---------------------------------------");
-                Debug.WriteLine(usuario.codigo);
-            }
-            */
-
-
             if (citaRDetalles.idUsuario == 0 || citaRDetalles.idUsuario == -1)
             {
 
@@ -108,18 +90,6 @@ namespace MyBotConversational.Dialog
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
             citaRDetalles.idUsuario = long.Parse((string)stepContext.Result);
 
-            /*_httpClient.BaseAddress = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}");
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));*/
-
-            Debug.WriteLine("ADDRESS S" + _httpClient.BaseAddress);
-
-
-
-            /*using HttpResponseMessage response = await _httpClient.GetAsync(_httpClient.BaseAddress);*/
-
-
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
@@ -133,11 +103,9 @@ namespace MyBotConversational.Dialog
 
             Usuario usuario = JsonSerializer.Deserialize<Usuario>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            /*Usuario usuario = await _httpClient.GetFromJsonAsync<Usuario>(_httpClient.BaseAddress);*/
 
             if (usuario == null)
             {
-                /*citaRDetalles.idUsuario = usuario.codigo; Debug.WriteLine(usuario.codigo);*/
                 Debug.WriteLine("1---------------------------------------");
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 2;
 
@@ -153,14 +121,67 @@ namespace MyBotConversational.Dialog
             return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
         }
 
+        private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+            citaRDetalles.idUsuario = (long)stepContext.Result;
+
+            HttpRequestMessage msg = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/token/generar/{citaRDetalles.idUsuario}"),
+            };
+
+            var response = await _httpClient.SendAsync(msg);
+
+            var content = await ValidateContent(response).ReadAsStringAsync();
+
+            var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            Debug.WriteLine("Este es mi token " + tokenresult.token);
+
+            var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
+
+        }
+
+        private async Task<DialogTurnResult> VerifyTokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+
+            var token = (string)stepContext.Result;
+
+
+            HttpRequestMessage msg = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/token/{token}/{citaRDetalles.idUsuario}"),
+            };
+
+            var response = await _httpClient.SendAsync(msg);
+
+            var content = await ValidateContent(response).ReadAsStringAsync();
+
+            bool isVerifyToken = JsonSerializer.Deserialize<bool>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+
+            if (!isVerifyToken)
+            {
+                Debug.WriteLine("2---------------------------------------");
+                stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 5;
+
+            }
+
+            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
+
+        }
+
+
         private async Task<DialogTurnResult> AnimalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
 
-            Debug.WriteLine("El RESULTADO DEL PASO ANTERIOR ES -> " + stepContext.Result);
-
-            citaRDetalles.idUsuario = (long)stepContext.Result;
 
 
             HttpRequestMessage msg = new HttpRequestMessage
@@ -178,22 +199,32 @@ namespace MyBotConversational.Dialog
 
 
             string listastringmascotas = "";
+            var listaOpciones = new List<Choice>();
 
-            for( int i = 0;i< mascotas.Count;i++)
+            for (int i = 0; i < mascotas.Count; i++)
             {
+                var cardAction = new CardAction();
+                cardAction.Title = mascotas[i].nombre;
+                cardAction.Value = mascotas[i].nombre;
+                cardAction.Type = "imBack";
+
+
+
+                listaOpciones.Add(new Choice()
+                {
+                    Value = mascotas[i].nombre,
+                    Action = cardAction
+                });
                 listastringmascotas = listastringmascotas + " " + mascotas[i].nombre;
             }
 
 
-            var Texto = $"Tienes estas mascotas registradas, dígite el nombre de una de ellas como se visualiza aquí -> {listastringmascotas}";
+            var Texto = $"Tienes estas mascotas registradas, seleccione una mascota a tratar";
 
-            if (string.IsNullOrEmpty(citaRDetalles.nombreMascota))
-            {
-                var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-                return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
-            }
 
-            return await stepContext.NextAsync(citaRDetalles.nombreMascota, cancellationToken);
+            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
+
         }
 
 
@@ -203,7 +234,7 @@ namespace MyBotConversational.Dialog
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            citaRDetalles.nombreMascota = (string)stepContext.Result;
+            citaRDetalles.nombreMascota = ((FoundChoice)stepContext.Result).Value;
 
 
 
@@ -219,34 +250,38 @@ namespace MyBotConversational.Dialog
 
             List<Servicio> servicios = JsonSerializer.Deserialize<List<Servicio>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-
-
-            string listastringservicios = "";
+            var listaOpciones = new List<Choice>();
 
             for (int i = 0; i < servicios.Count; i++)
             {
-                listastringservicios += servicios[i].tipo + " con código -> [" + servicios[i].codigo + "], ";
+                var cardAction = new CardAction();
+                cardAction.Title = servicios[i].tipo;
+                cardAction.Value = servicios[i].tipo;
+                cardAction.Type = "imBack";
+
+                listaOpciones.Add(new Choice()
+                {
+                    Value = servicios[i].tipo,
+                    Action = cardAction
+                });
             }
 
 
-            var Texto = $"Tenemos disponible los siguientes servicios, dígite exactamente el nombre del tipo de servicio de uno de ellos -> {listastringservicios}";
+            var Texto = $"Tenemos disponible los siguientes servicios, seleccione uno de estos servicios";
 
-            if (string.IsNullOrEmpty(citaRDetalles.nombreServicio))
-            {
-                var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-                return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
-            }
+            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
 
-            return await stepContext.NextAsync(citaRDetalles.nombreServicio, cancellationToken);
         }
 
         private async Task<DialogTurnResult> FechaStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            citaRDetalles.nombreServicio = (string)stepContext.Result;
+            //citaRDetalles.nombreServicio = (string)stepContext.Result;
+            citaRDetalles.nombreServicio = ((FoundChoice)stepContext.Result).Value;
 
-            Debug.WriteLine("Si esta entrando aqui");
+            Debug.WriteLine("El nombre del servicio es " + citaRDetalles.nombreServicio);
 
 
             HttpRequestMessage msg = new HttpRequestMessage
@@ -264,48 +299,43 @@ namespace MyBotConversational.Dialog
 
 
             string listastringhorarios = "";
+            var listaOpciones = new List<Choice>();
+
 
             for (int i = 0; i < horarios.Count; i++)
             {
-                listastringhorarios += horarios[i].fecha + " con código -> [" + horarios[i].codigo + "], ";
-            }
-            var Texto = $"Tenemos disponible los siguientes horarios para ese servicio, dígite exactamente el horario de uno de ellos -> {listastringhorarios}";
+                var cardAction = new CardAction();
+                cardAction.Title = horarios[i].fecha.ToString();
+                cardAction.Value = horarios[i].codigo.ToString();
+                cardAction.Type = "imBack";
 
-            if (citaRDetalles.idFecha == 0 || citaRDetalles.idFecha == -1)
-            {
-                var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-                return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
+                listaOpciones.Add(new Choice()
+                {
+                    Value = horarios[i].codigo.ToString(),
+                    Action = cardAction
+                });
             }
+            var Texto = $"Tenemos disponible los siguientes horarios para ese servicio, seleccione uno de ellos";
 
-            return await stepContext.NextAsync(citaRDetalles.idFecha, cancellationToken);
+            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
+
         }
 
-        /*private async Task<DialogTurnResult> FechaConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-
-            citaRDetalles.fecha = (string)stepContext.Result;
-
-            Debug.WriteLine(citaRDetalles.fecha);
-
-            if (citaRDetalles.fecha == null || IsAmbiguous(citaRDetalles.fecha))
-            {
-                return await stepContext.BeginDialogAsync(nameof(DateResolverDialog), citaRDetalles.fecha, cancellationToken);
-            }
-
-            return await stepContext.NextAsync(citaRDetalles.fecha, cancellationToken);
-        }¨*/
 
 
         private async Task<DialogTurnResult> ConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            citaRDetalles.idFecha = long.Parse((string)stepContext.Result);
+            //citaRDetalles.idFecha = long.Parse((string)stepContext.Result);
+            citaRDetalles.idFecha = long.Parse(((FoundChoice)stepContext.Result).Value);
+            Debug.WriteLine("El código de fecha es  " + citaRDetalles.idFecha);
+
 
             var messageText = $"Por favor confirma, el id del usuario es ->  {citaRDetalles.idUsuario} , la mascota es -> {citaRDetalles.nombreMascota} y el código de la fecha es -> {citaRDetalles.idFecha}. ¿Es correcto?";
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
-            
+
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
         }
 
