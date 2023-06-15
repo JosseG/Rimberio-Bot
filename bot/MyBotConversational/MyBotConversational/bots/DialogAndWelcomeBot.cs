@@ -30,7 +30,7 @@ namespace MyBotConversational.bots
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
                     var welcomeCard = CreateAdaptiveCardAttachment();
-                    var response = MessageFactory.Attachment(welcomeCard, ssml: "Bienvenido a la veterinaria NNN!");
+                    var response = MessageFactory.Attachment(welcomeCard, ssml: "Bienvenido a la veterinaria Rimberio!");
                     await turnContext.SendActivityAsync(response, cancellationToken);
                     await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>("DialogState"), cancellationToken);
                 }

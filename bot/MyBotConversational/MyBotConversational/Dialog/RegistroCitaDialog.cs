@@ -9,15 +9,11 @@ using System.Net.Http.Json;
 using MyBotConversational.ModelsApi;
 using System;
 using System.Diagnostics;
-using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
 using System.Text.Json;
-using System.Net;
 using System.Collections.Generic;
 using Microsoft.Bot.Builder.Dialogs.Choices;
-using System.Linq;
-using System.Collections;
 
 namespace MyBotConversational.Dialog
 {
@@ -71,18 +67,10 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> IdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
+            Debug.WriteLine("2---------------------------------------");
+            var promptMessage = MessageFactory.Text(CodigoUsuarioStepMsgText, CodigoUsuarioStepMsgText, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
-
-
-            if (citaRDetalles.idUsuario == 0 || citaRDetalles.idUsuario == -1)
-            {
-
-                Debug.WriteLine("2---------------------------------------");
-                var promptMessage = MessageFactory.Text(CodigoUsuarioStepMsgText, CodigoUsuarioStepMsgText, InputHints.ExpectingInput);
-                return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
-            }
-
-            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
         }
 
         private async Task<DialogTurnResult> VerifyIdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -94,7 +82,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -129,7 +117,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/token/generar/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/token/generar/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -162,10 +150,14 @@ namespace MyBotConversational.Dialog
 
             var content = await ValidateContent(response).ReadAsStringAsync();
 
-            bool isVerifyToken = JsonSerializer.Deserialize<bool>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            var isVerifyToken = JsonSerializer.Deserialize<object>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+            Debug.WriteLine("Está verificado ? " + isVerifyToken + " con tipo de dato ");
+
+            var boolResutlToken = Convert.ToBoolean(isVerifyToken.ToString());
 
 
-            if (!isVerifyToken)
+            if (!boolResutlToken)
             {
                 Debug.WriteLine("2---------------------------------------");
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 5;
@@ -187,7 +179,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/mascota/usuario/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/mascota/usuario/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -241,7 +233,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("http://127.0.0.1:8080/api/v1/reservaciones/servicios"),
+                RequestUri = new Uri("https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/servicios"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -287,7 +279,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/horario/service/{citaRDetalles.nombreServicio}"),
+                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/horario/service/{citaRDetalles.nombreServicio}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -297,8 +289,6 @@ namespace MyBotConversational.Dialog
             List<Horario> horarios = JsonSerializer.Deserialize<List<Horario>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
 
-
-            string listastringhorarios = "";
             var listaOpciones = new List<Choice>();
 
 
@@ -355,7 +345,7 @@ namespace MyBotConversational.Dialog
                 HttpRequestMessage msg = new HttpRequestMessage
                 {
                     Method = HttpMethod.Post,
-                    RequestUri = new Uri("http://127.0.0.1:8080/api/v1/reservaciones"),
+                    RequestUri = new Uri("https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones"),
                     Content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json")
 
                 };
