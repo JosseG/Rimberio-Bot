@@ -138,12 +138,12 @@ namespace MyBotConversational.Dialog
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
             var token = (string)stepContext.Result;
-
+            
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/token/{token}/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/token/{token}/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
