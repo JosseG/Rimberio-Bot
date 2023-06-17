@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'WebAppRimberio'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B137B15751594A448A748DFCFDF323A4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_75DDCBEA4AEE4DA09A335E70DC56F702 }}
           package: .
