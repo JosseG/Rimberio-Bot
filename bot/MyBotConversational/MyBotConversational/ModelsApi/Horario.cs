@@ -5,9 +5,13 @@ namespace MyBotConversational.ModelsApi
     public class Horario
     {
 
-        public long codigo { get; set; }
-        public DateTime fecha { get; set; }
-        public Medico medico { get; set; }
+        public long id { get; set; }
+
+        public string diaSemana { get; set; }
+        public string horaInicio { get; set; }
+        public string horaFin { get; set; }
+        public Veterinario veterinario { get; set; }
+        public bool estado { get; set; }
 
     }
 }

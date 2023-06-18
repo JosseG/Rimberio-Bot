@@ -18,7 +18,7 @@ namespace MyBotConversational.Dialog
         private readonly HttpClient _httpClient;
 
         private const string IntroStepMsgText = "Escogio la intención de ver cita";
-        private const string CodigoUsuarioStepMsgText = "¿Cual es su código de usuario? Es necesario para consultar sus reservas pendientes";
+        private const string NombreUsuarioStepMsgText = "¿Cual es su nombre de usuario? Es necesario para consultar sus reservas pendientes";
         private const string TokenStepMsgText = "Fue enviado un token a su bandeja de correo, inserte su token en el siguiente mensaje";
 
         public VistaCitaDialog(HttpClient httpClient)
@@ -30,8 +30,8 @@ namespace MyBotConversational.Dialog
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
-                IdUsuarioStepAsync,
-                VerifyIdUsuarioStepAsync,
+                UsernameUsuarioStepAsync,
+                VerifyUsernameUsuarioStepAsync,
                 TokenStepAsync,
                 VerifyTokenStepAsync,
                 FinalStepAsync,
@@ -49,25 +49,25 @@ namespace MyBotConversational.Dialog
             return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
 
-        private async Task<DialogTurnResult> IdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> UsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("2---------------------------------------");
-            var promptMessage = MessageFactory.Text(CodigoUsuarioStepMsgText, CodigoUsuarioStepMsgText, InputHints.ExpectingInput);
+
+            var promptMessage = MessageFactory.Text(NombreUsuarioStepMsgText, NombreUsuarioStepMsgText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
 
-        private async Task<DialogTurnResult> VerifyIdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> VerifyUsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.idUsuario = long.Parse((string)stepContext.Result);
+            citaRDetalles.username = (string)stepContext.Result;
 
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/usuario/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -85,24 +85,25 @@ namespace MyBotConversational.Dialog
             }
             else
             {
-                citaRDetalles.idUsuario = usuario.codigo;
+                citaRDetalles.idUsuario = usuario.id;
+                citaRDetalles.username = usuario.username;
             }
 
 
 
 
-            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
+            return await stepContext.NextAsync(citaRDetalles.username, cancellationToken);
         }
 
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.idUsuario = (long)stepContext.Result;
+            citaRDetalles.username = (string)stepContext.Result;
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/token/generar/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -128,7 +129,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"http://127.0.0.1:8080/api/v1/reservaciones/usuario/token/{token}/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);

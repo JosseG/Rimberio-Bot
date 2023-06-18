@@ -14,6 +14,8 @@ using System.Text;
 using System.Text.Json;
 using System.Collections.Generic;
 using Microsoft.Bot.Builder.Dialogs.Choices;
+using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyBotConversational.Dialog
 {
@@ -23,7 +25,7 @@ namespace MyBotConversational.Dialog
         private readonly HttpClient _httpClient;
 
         private const string IntroStepMsgText = "Escogio la intención de registrar cita";
-        private const string CodigoUsuarioStepMsgText = "¿Cual es su código de usuario?";
+        private const string UsernameUsuarioStepMsgText = "¿Cual es su nombre de usuario?";
         private const string TokenStepMsgText = "Fue enviado un token a su bandeja de correo, inserte su token en el siguiente mensaje";
         private const string MascotaStepMsgText = "¿Que mascota va a traer?";
 
@@ -39,12 +41,14 @@ namespace MyBotConversational.Dialog
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
-                IdUsuarioStepAsync,
-                VerifyIdUsuarioStepAsync,
+                UsernameUsuarioStepAsync,
+                VerifyUsernameUsuarioStepAsync,
                 TokenStepAsync,
                 VerifyTokenStepAsync,
-                AnimalStepAsync,
-                ServiciosInfoStepAsync,
+                MascotasStepAsync,
+                EspecialidadesStepAsync,
+                VeterinariosStepAsync,
+                HoraStepAsync,
                 FechaStepAsync,
                 ConfirmStepAsync,
                 FinalStepAsync,
@@ -61,28 +65,36 @@ namespace MyBotConversational.Dialog
             var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
             await stepContext.Context.SendActivityAsync(message, cancellationToken);
 
+            var dateNow = DateOnly.FromDateTime(DateTime.Now);
+            CultureInfo culture = new CultureInfo("es-MX");
+
+
+
+            Debug.WriteLine(dateNow.ToString("dddd", culture));
+
+
             return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
 
-        private async Task<DialogTurnResult> IdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> UsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("2---------------------------------------");
-            var promptMessage = MessageFactory.Text(CodigoUsuarioStepMsgText, CodigoUsuarioStepMsgText, InputHints.ExpectingInput);
+
+            var promptMessage = MessageFactory.Text(UsernameUsuarioStepMsgText, UsernameUsuarioStepMsgText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
 
-        private async Task<DialogTurnResult> VerifyIdUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> VerifyUsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.idUsuario = long.Parse((string)stepContext.Result);
+            citaRDetalles.username = (string)stepContext.Result;
 
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/usuario/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -100,24 +112,25 @@ namespace MyBotConversational.Dialog
             }
             else
             {
-                citaRDetalles.idUsuario = usuario.codigo;
+                citaRDetalles.idUsuario = usuario.id;
+                citaRDetalles.username = usuario.username;
             }
 
 
 
 
-            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
+            return await stepContext.NextAsync(citaRDetalles.username, cancellationToken);
         }
 
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.idUsuario = (long)stepContext.Result;
+            citaRDetalles.username = (string)stepContext.Result;
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/token/generar/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -138,12 +151,12 @@ namespace MyBotConversational.Dialog
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
             var token = (string)stepContext.Result;
-            
+
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/usuario/token/{token}/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -169,7 +182,7 @@ namespace MyBotConversational.Dialog
         }
 
 
-        private async Task<DialogTurnResult> AnimalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> MascotasStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
@@ -179,7 +192,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/mascota/usuario/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/mascota/usuario/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -204,7 +217,8 @@ namespace MyBotConversational.Dialog
 
                 listaOpciones.Add(new Choice()
                 {
-                    Value = mascotas[i].nombre,
+                    //Value = mascotas[i].id.ToString(),
+                    Value = JsonSerializer.Serialize<Mascota>(mascotas[i]),
                     Action = cardAction
                 });
                 listastringmascotas = listastringmascotas + " " + mascotas[i].nombre;
@@ -222,64 +236,116 @@ namespace MyBotConversational.Dialog
 
 
 
-        private async Task<DialogTurnResult> ServiciosInfoStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> EspecialidadesStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            citaRDetalles.nombreMascota = ((FoundChoice)stepContext.Result).Value;
+
+            citaRDetalles.mascota = JsonSerializer.Deserialize<Mascota>(((FoundChoice)stepContext.Result).Value);
 
 
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/servicios"),
+                RequestUri = new Uri("https://rimberioback-production.up.railway.app/rimbeiro/especialidades"),
             };
 
             var response = await _httpClient.SendAsync(msg);
 
             var content = await ValidateContent(response).ReadAsStringAsync();
 
-            List<Servicio> servicios = JsonSerializer.Deserialize<List<Servicio>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            List<Especialidad> especialidades = JsonSerializer.Deserialize<List<Especialidad>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
             var listaOpciones = new List<Choice>();
 
-            for (int i = 0; i < servicios.Count; i++)
+            for (int i = 0; i < especialidades.Count; i++)
             {
                 var cardAction = new CardAction();
-                cardAction.Title = servicios[i].tipo;
-                cardAction.Value = servicios[i].tipo;
+                cardAction.Title = especialidades[i].descripcion;
+                cardAction.Value = especialidades[i].descripcion;
                 cardAction.Type = "imBack";
 
                 listaOpciones.Add(new Choice()
                 {
-                    Value = servicios[i].tipo,
+                    Value = especialidades[i].Id.ToString(),
                     Action = cardAction
                 });
             }
 
 
-            var Texto = $"Tenemos disponible los siguientes servicios, seleccione uno de estos servicios";
+            var Texto = $"Tenemos disponible las siguientes especialidades, seleccione una de ellas";
 
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
 
         }
 
-        private async Task<DialogTurnResult> FechaStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+
+        private async Task<DialogTurnResult> VeterinariosStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            //citaRDetalles.nombreServicio = (string)stepContext.Result;
-            citaRDetalles.nombreServicio = ((FoundChoice)stepContext.Result).Value;
-
-            Debug.WriteLine("El nombre del servicio es " + citaRDetalles.nombreServicio);
+            citaRDetalles.idEspecialidad = long.Parse(((FoundChoice)stepContext.Result).Value);
 
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones/horario/service/{citaRDetalles.nombreServicio}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/veterinario/especialidad/{citaRDetalles.idEspecialidad}"),
+            };
+
+            var response = await _httpClient.SendAsync(msg);
+
+            var content = await ValidateContent(response).ReadAsStringAsync();
+
+            List<Veterinario> veterinarios = JsonSerializer.Deserialize<List<Veterinario>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+
+
+
+            var listaOpciones = new List<Choice>();
+
+            for (int i = 0; i < veterinarios.Count; i++)
+            {
+                var cardAction = new CardAction();
+                cardAction.Title = veterinarios[i].nombres;
+                cardAction.Value = veterinarios[i].nombres;
+                cardAction.Type = "imBack";
+
+
+
+                listaOpciones.Add(new Choice()
+                {
+                    //Value = veterinarios[i].id.ToString(),
+                    Value = JsonSerializer.Serialize<Veterinario>(veterinarios[i]),
+                    Action = cardAction
+                });
+            }
+
+
+            var Texto = $"Veterinarios que gestionan esa especialidad, escoge a cualquiera de ellos";
+
+
+            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
+        }
+
+        private async Task<DialogTurnResult> HoraStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+
+
+            citaRDetalles.veterinario = JsonSerializer.Deserialize<Veterinario>(((FoundChoice)stepContext.Result).Value);
+
+
+
+            Debug.WriteLine("El id del veterinario es " + citaRDetalles.idVeterinario);
+
+
+            HttpRequestMessage msg = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/horarios/veterinario/{citaRDetalles.veterinario.id}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -294,14 +360,16 @@ namespace MyBotConversational.Dialog
 
             for (int i = 0; i < horarios.Count; i++)
             {
+                Debug.WriteLine(horarios[i].id);
                 var cardAction = new CardAction();
-                cardAction.Title = horarios[i].fecha.ToString();
-                cardAction.Value = horarios[i].codigo.ToString();
+                cardAction.Title = horarios[i].horaInicio + " - " + horarios[i].horaFin;
+                cardAction.Value = horarios[i].horaInicio + " - " + horarios[i].horaFin;
                 cardAction.Type = "imBack";
 
                 listaOpciones.Add(new Choice()
                 {
-                    Value = horarios[i].codigo.ToString(),
+                    //Value = horarios[i].id.ToString(),
+                    Value = JsonSerializer.Serialize<Horario>(horarios[i]),
                     Action = cardAction
                 });
             }
@@ -312,18 +380,75 @@ namespace MyBotConversational.Dialog
 
         }
 
+        private async Task<DialogTurnResult> FechaStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+            citaRDetalles.horario = JsonSerializer.Deserialize<Horario>(((FoundChoice)stepContext.Result).Value);
+            Debug.WriteLine(citaRDetalles.horario.id);
+
+            var Texto = $"Dígite la fecha de la reserva con el siguiente formato año-mes-dia / aaaa-mm-dd";
+
+            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+            return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
+
+        }
+
 
 
         private async Task<DialogTurnResult> ConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
-            //citaRDetalles.idFecha = long.Parse((string)stepContext.Result);
-            citaRDetalles.idFecha = long.Parse(((FoundChoice)stepContext.Result).Value);
-            Debug.WriteLine("El código de fecha es  " + citaRDetalles.idFecha);
+            citaRDetalles.fecha = (string)stepContext.Result;
 
 
-            var messageText = $"Por favor confirma, el id del usuario es ->  {citaRDetalles.idUsuario} , la mascota es -> {citaRDetalles.nombreMascota} y el código de la fecha es -> {citaRDetalles.idFecha}. ¿Es correcto?";
+            /*string[] split = citaRDetalles.horario.diaSemana.Split(",");
+
+            foreach(string el in split)
+            {
+                Debug.WriteLine(el);
+            }
+
+            var dateNow = DateOnly.FromDateTime(DateTime.Now);
+            CultureInfo culture = new CultureInfo("es-MX");
+
+
+            var dateOnlyTest = new Int32();
+            var allDates = new List<DateOnly>();
+
+            var datesFiltred = new List<DateOnly>();
+
+            Debug.WriteLine(dateNow.ToString("dddd", culture));
+
+            var daynumber = dateNow.DayNumber;
+            var iterable = daynumber + 10;
+
+            for (int i= daynumber; i< iterable + 10; i++)
+            {
+                dateOnlyTest = i;
+
+                allDates.Add( new DateOnly(dateNow.Year,dateNow.Month,i));
+
+                for(int j=0;j< allDates.Count; j++)
+                {
+                    foreach(string el in split)
+                    {
+                        if (allDates[j].ToString("dddd", culture).Contains(el.ToLower()))
+                        {
+                            datesFiltred.Add(new DateOnly(dateNow.Year, dateNow.Month, allDates[i].DayNumber));
+                        }
+                    }
+                }
+            }
+            
+            foreach(DateOnly dateOnly in datesFiltred)
+            {
+                Debug.WriteLine("Este es el día con " + dateOnly.ToString("dddd",culture) + " fecha " + dateOnly.DayNumber);
+            }*/
+
+
+
+            var messageText = $"Por favor confirma, el nombre del usuario es ->  {citaRDetalles.username} , la mascota es -> {citaRDetalles.mascota.nombre} y la fecha de la reserva es -> {citaRDetalles.fecha}. ¿Es correcto?";
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
 
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
@@ -337,20 +462,23 @@ namespace MyBotConversational.Dialog
 
                 var parameters = new
                 {
-                    idUsuario = citaRDetalles.idUsuario,
-                    nombreMascota = citaRDetalles.nombreMascota,
-                    idFecha = citaRDetalles.idFecha
+                    idmascota = citaRDetalles.mascota.id,
+                    idveterinario = citaRDetalles.veterinario.id,
+                    fecha = citaRDetalles.fecha,
+                    hora = citaRDetalles.horario.horaInicio
                 };
 
                 HttpRequestMessage msg = new HttpRequestMessage
                 {
                     Method = HttpMethod.Post,
-                    RequestUri = new Uri("https://temporalbackendveterinaria-production.up.railway.app/api/v1/reservaciones"),
+                    RequestUri = new Uri("https://rimberioback-production.up.railway.app/rimbeiro/reserva"),
                     Content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json")
 
                 };
 
                 var response = await _httpClient.SendAsync(msg);
+
+                Debug.WriteLine("La respuesta " + response);
 
                 return await stepContext.EndDialogAsync(citaRDetalles, cancellationToken);
             }

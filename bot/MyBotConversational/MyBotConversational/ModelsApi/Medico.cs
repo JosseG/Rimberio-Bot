@@ -7,7 +7,6 @@ namespace MyBotConversational.ModelsApi
 
         long codigo { get; set; }
         string nombre { get; set; }
-        Servicio servicio { get; set; }
 
     }
 }
