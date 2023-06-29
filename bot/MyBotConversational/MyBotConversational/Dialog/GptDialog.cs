@@ -37,7 +37,6 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {            
-            string otraVariableSinInic;
 
             string message = (string)stepContext.Options;
 
@@ -53,7 +52,7 @@ namespace MyBotConversational.Dialog
 
         private async Task<String> responseGpt(string input)
         {
-            var apitoken = _config["OpenAIKey"];
+            var apitoken = _config["GPTAccessKey"];
             if (_httpClient.BaseAddress == null)
             {
                 _httpClient.BaseAddress = new Uri(GptApiUrl);
