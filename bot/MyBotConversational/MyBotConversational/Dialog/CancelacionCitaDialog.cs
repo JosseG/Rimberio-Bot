@@ -24,13 +24,14 @@ namespace MyBotConversational.Dialog
                 FinalStepAsync,
             }));
 
-            // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
+
         }
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
+
             await stepContext.Context.SendActivityAsync(message, cancellationToken);
         
             return await stepContext.NextAsync(cancellationToken:cancellationToken);
@@ -43,6 +44,7 @@ namespace MyBotConversational.Dialog
             if (citaCDetalles.idcita == null)
             {
                 var promptMessage = MessageFactory.Text(IdStepMsgText, IdStepMsgText, InputHints.ExpectingInput);
+
                 return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
             }
 
@@ -57,6 +59,7 @@ namespace MyBotConversational.Dialog
             citaCDetalles.idcita = (string)stepContext.Result;
 
             var messageText = $"La cita a cancelar tiene el siguiente ID ->  {citaCDetalles.idcita}. ¿Es correcto?";
+
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
 
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);

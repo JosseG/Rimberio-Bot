@@ -18,7 +18,7 @@ namespace MyBotConversational.Dialog
     public class GptDialog : CancelAndHelpDialog
     {
         private readonly HttpClient _httpClient;
-        private const string GptApiUrl = "https://api.openai.com/v1/completions";  // URL de la API de GPT
+        private const string GptApiUrl = "https://api.openai.com/v1/completions"; 
         private readonly IConfiguration _config;
 
         public GptDialog(IConfiguration configuration, HttpClient httpClient)
@@ -32,7 +32,6 @@ namespace MyBotConversational.Dialog
                 IntroStepAsync
             }));
 
-            // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
         }
 

@@ -37,7 +37,6 @@ namespace MyBotConversational.Dialog
                 FinalStepAsync,
             }));
 
-            // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
         }
 
@@ -51,7 +50,7 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> UsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+            var citaVDetalles = (CitaVDetalles)stepContext.Options;
 
             var promptMessage = MessageFactory.Text(NombreUsuarioStepMsgText, NombreUsuarioStepMsgText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
@@ -60,14 +59,14 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> VerifyUsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.username = (string)stepContext.Result;
+            var citaVDetalles = (CitaVDetalles)stepContext.Options;
+            citaVDetalles.username = (string)stepContext.Result;
 
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/usuario/{citaRDetalles.username}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/usuario/{citaVDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -76,34 +75,29 @@ namespace MyBotConversational.Dialog
 
             Usuario usuario = JsonSerializer.Deserialize<Usuario>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-
             if (usuario == null)
             {
-                Debug.WriteLine("1---------------------------------------");
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 2;
 
             }
             else
             {
-                citaRDetalles.idUsuario = usuario.id;
-                citaRDetalles.username = usuario.username;
+                citaVDetalles.idUsuario = usuario.id;
+                citaVDetalles.username = usuario.username;
             }
 
-
-
-
-            return await stepContext.NextAsync(citaRDetalles.username, cancellationToken);
+            return await stepContext.NextAsync(citaVDetalles.username, cancellationToken);
         }
 
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.username = (string)stepContext.Result;
+            var citaVDetalles = (CitaVDetalles)stepContext.Options;
+            citaVDetalles.username = (string)stepContext.Result;
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaRDetalles.username}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaVDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -112,8 +106,6 @@ namespace MyBotConversational.Dialog
 
             var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Este es mi token " + tokenresult.token);
-
             var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
@@ -121,7 +113,7 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> VerifyTokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
+            var citaVDetalles = (CitaVDetalles)stepContext.Options;
 
             var token = (string)stepContext.Result;
 
@@ -129,7 +121,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaVDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -138,19 +130,14 @@ namespace MyBotConversational.Dialog
 
             var isVerifyToken = JsonSerializer.Deserialize<object>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Está verificado ? " + isVerifyToken + " con tipo de dato ");
-
             var boolResutlToken = Convert.ToBoolean(isVerifyToken.ToString());
-
 
             if (!boolResutlToken)
             {
-                Debug.WriteLine("2---------------------------------------");
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 5;
-
             }
 
-            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
+            return await stepContext.NextAsync(citaVDetalles.idUsuario, cancellationToken);
 
         }
 

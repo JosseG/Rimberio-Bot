@@ -54,7 +54,6 @@ namespace MyBotConversational.Dialog
                 FinalStepAsync,
             }));
 
-            // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
         }
 
@@ -63,15 +62,12 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
+
             await stepContext.Context.SendActivityAsync(message, cancellationToken);
 
             var dateNow = DateOnly.FromDateTime(DateTime.Now);
+
             CultureInfo culture = new CultureInfo("es-MX");
-
-
-
-            Debug.WriteLine(dateNow.ToString("dddd", culture));
-
 
             return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
@@ -81,6 +77,7 @@ namespace MyBotConversational.Dialog
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
             var promptMessage = MessageFactory.Text(UsernameUsuarioStepMsgText, UsernameUsuarioStepMsgText, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
@@ -106,7 +103,7 @@ namespace MyBotConversational.Dialog
 
             if (usuario == null)
             {
-                Debug.WriteLine("1---------------------------------------");
+
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 2;
 
             }
@@ -139,9 +136,8 @@ namespace MyBotConversational.Dialog
 
             var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Este es mi token " + tokenresult.token);
-
             var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
@@ -165,14 +161,10 @@ namespace MyBotConversational.Dialog
 
             var isVerifyToken = JsonSerializer.Deserialize<object>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Está verificado ? " + isVerifyToken + " con tipo de dato ");
-
             var boolResutlToken = Convert.ToBoolean(isVerifyToken.ToString());
-
 
             if (!boolResutlToken)
             {
-                Debug.WriteLine("2---------------------------------------");
                 stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 5;
 
             }
@@ -316,7 +308,6 @@ namespace MyBotConversational.Dialog
 
                 listaOpciones.Add(new Choice()
                 {
-                    //Value = veterinarios[i].id.ToString(),
                     Value = JsonSerializer.Serialize<Veterinario>(veterinarios[i]),
                     Action = cardAction
                 });
@@ -325,8 +316,8 @@ namespace MyBotConversational.Dialog
 
             var Texto = $"Veterinarios que gestionan esa especialidad, escoge a cualquiera de ellos";
 
-
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
         }
 
@@ -368,7 +359,6 @@ namespace MyBotConversational.Dialog
 
                 listaOpciones.Add(new Choice()
                 {
-                    //Value = horarios[i].id.ToString(),
                     Value = JsonSerializer.Serialize<Horario>(horarios[i]),
                     Action = cardAction
                 });
@@ -376,8 +366,8 @@ namespace MyBotConversational.Dialog
             var Texto = $"Tenemos disponible los siguientes horarios para ese servicio, seleccione uno de ellos";
 
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
 
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
         }
 
         private async Task<DialogTurnResult> FechaStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -389,6 +379,7 @@ namespace MyBotConversational.Dialog
             var Texto = $"Dígite la fecha de la reserva con el siguiente formato año-mes-dia / aaaa-mm-dd";
 
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
@@ -401,57 +392,12 @@ namespace MyBotConversational.Dialog
 
             citaRDetalles.fecha = (string)stepContext.Result;
 
-
-            /*string[] split = citaRDetalles.horario.diaSemana.Split(",");
-
-            foreach(string el in split)
-            {
-                Debug.WriteLine(el);
-            }
-
-            var dateNow = DateOnly.FromDateTime(DateTime.Now);
-            CultureInfo culture = new CultureInfo("es-MX");
-
-
-            var dateOnlyTest = new Int32();
-            var allDates = new List<DateOnly>();
-
-            var datesFiltred = new List<DateOnly>();
-
-            Debug.WriteLine(dateNow.ToString("dddd", culture));
-
-            var daynumber = dateNow.DayNumber;
-            var iterable = daynumber + 10;
-
-            for (int i= daynumber; i< iterable + 10; i++)
-            {
-                dateOnlyTest = i;
-
-                allDates.Add( new DateOnly(dateNow.Year,dateNow.Month,i));
-
-                for(int j=0;j< allDates.Count; j++)
-                {
-                    foreach(string el in split)
-                    {
-                        if (allDates[j].ToString("dddd", culture).Contains(el.ToLower()))
-                        {
-                            datesFiltred.Add(new DateOnly(dateNow.Year, dateNow.Month, allDates[i].DayNumber));
-                        }
-                    }
-                }
-            }
-            
-            foreach(DateOnly dateOnly in datesFiltred)
-            {
-                Debug.WriteLine("Este es el día con " + dateOnly.ToString("dddd",culture) + " fecha " + dateOnly.DayNumber);
-            }*/
-
-
-
             var messageText = $"Por favor confirma, el nombre del usuario es ->  {citaRDetalles.username} , la mascota es -> {citaRDetalles.mascota.nombre} y la fecha de la reserva es -> {citaRDetalles.fecha}. ¿Es correcto?";
+
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
 
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
+
         }
 
         private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -490,6 +436,7 @@ namespace MyBotConversational.Dialog
         {
             var timexProperty = new TimexProperty(timex);
             return !timexProperty.Types.Contains(Constants.TimexTypes.DateTime);
+
         }
 
 

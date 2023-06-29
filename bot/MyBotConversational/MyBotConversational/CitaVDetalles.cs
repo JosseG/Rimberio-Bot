@@ -4,5 +4,8 @@ namespace MyBotConversational
     {
 
         public string idcita { get; set; }
+
+        public string username { get; set; }
+        public long idUsuario { get; set; }
     }
 }

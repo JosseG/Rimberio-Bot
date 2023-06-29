@@ -25,8 +25,7 @@ namespace MyBotConversational.bots
         {
             foreach (var member in membersAdded)
             {
-                // Greet anyone that was not the target (recipient) of this message.
-                // To learn more about Adaptive Cards, see https://aka.ms/msbot-adaptivecards for more details.
+
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
                     var welcomeCard = CreateAdaptiveCardAttachment();
@@ -37,7 +36,6 @@ namespace MyBotConversational.bots
             }
         }
 
-        // Load attachment from embedded resource.
         private Attachment CreateAdaptiveCardAttachment()
         {
             var cardResourcePath = "MyBotConversational.cards.welcomeCard.json";
