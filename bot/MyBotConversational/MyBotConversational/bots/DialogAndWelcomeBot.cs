@@ -26,7 +26,7 @@ namespace MyBotConversational.bots
             foreach (var member in membersAdded)
             {
 
-                if (member.Id != turnContext.Activity.Recipient.Id)
+                if (!member.Id.EndsWith(turnContext.Activity.Recipient.Id))
                 {
                     var welcomeCard = CreateAdaptiveCardAttachment();
                     var response = MessageFactory.Attachment(welcomeCard, ssml: "Bienvenido a la veterinaria Rimberio!");

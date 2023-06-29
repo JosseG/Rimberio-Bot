@@ -24,10 +24,10 @@ namespace MyBotConversational.Dialog
 
         private readonly HttpClient _httpClient;
 
-        private const string IntroStepMsgText = "Escogio la intención de registrar cita";
-        private const string UsernameUsuarioStepMsgText = "¿Cual es su nombre de usuario?";
-        private const string TokenStepMsgText = "Fue enviado un token a su bandeja de correo, inserte su token en el siguiente mensaje";
-        private const string MascotaStepMsgText = "¿Que mascota va a traer?";
+        private const string IntroStepMsgText = "Escogio la intención de registrar cita  ✏️ 📎 📋";
+        private const string UsernameUsuarioStepMsgText = "¿Cual es su nombre de usuario? 👩 👦";
+        private const string TokenStepMsgText = "Fue enviado un token a su bandeja de correo, inserte su token en el siguiente mensaje 🗝 📧";
+        private const string MascotaStepMsgText = "¿Que mascota va a traer? 🐶 🐱 🐹 🐰";
 
         public RegistroCitaDialog(HttpClient httpClient)
             : base(nameof(RegistroCitaDialog))
