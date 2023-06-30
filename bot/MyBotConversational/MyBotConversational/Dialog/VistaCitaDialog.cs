@@ -1,15 +1,14 @@
-using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
-using System.Threading.Tasks;
-using System.Threading;
 using MyBotConversational.ModelsApi;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Text.Json;
 using System;
+using System.Net.Http;
 using System.Net.Mime;
 using System.Text;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MyBotConversational.Dialog
 {
@@ -66,7 +65,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/usuario/{citaVDetalles.username}"),
+                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/usuario/{citaVDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -97,7 +96,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaVDetalles.username}"),
+                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/token/usuario/generar/{citaVDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -121,7 +120,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaVDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaVDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
