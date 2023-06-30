@@ -36,40 +36,13 @@ namespace MyBotConversational.Dialog
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
             AddDialog(new ChoicePrompt(nameof(ChoicePrompt)));
             AddDialog(new DateResolverDialog());
-
-            var flow0Dialog = new WaterfallDialog("flow0", new WaterfallStep[]
+            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
-
-            });
-            AddDialog(flow0Dialog);
-
-            var flow1Dialog = new WaterfallDialog("flow1", new WaterfallStep[]
-            {
-
                 UsernameUsuarioStepAsync,
-                VerifyUsernameUsuarioStepAsync
-
-            })
-            ;
-            AddDialog(flow1Dialog);
-
-            var flowChooseTypeInteractionWithSystem = new WaterfallDialog("flow2", new WaterfallStep[]
-            {
-                VerifyBeforeFinishStep,
-                VerifyFinishStep,
-            });
-            AddDialog(flowChooseTypeInteractionWithSystem);
-
-            var flowTokenManagement = new WaterfallDialog("flow3", new WaterfallStep[]
-            {
+                VerifyUsernameUsuarioStepAsync,
                 TokenStepAsync,
-                VerifyTokenStepAsync
-
-            });
-            AddDialog(flowTokenManagement);
-            var flowBusinessLogic = new WaterfallDialog("flow4", new WaterfallStep[]
-            {
+                VerifyTokenStepAsync,
                 MascotasStepAsync,
                 EspecialidadesStepAsync,
                 VeterinariosStepAsync,
@@ -77,37 +50,24 @@ namespace MyBotConversational.Dialog
                 FechaStepAsync,
                 ConfirmStepAsync,
                 FinalStepAsync,
-            });
-            AddDialog(flowBusinessLogic);
+            }));
 
-            var emailTemporal = new WaterfallDialog("flow5", new WaterfallStep[]
-            {
-                GetEmailTemporalStepAsync,
-                SetEmailTemporalStepAsync,
-            });
-            AddDialog(emailTemporal);
-
-
-            // The initial child Dialog to run.
-            InitialDialogId = "flow0";
+            InitialDialogId = nameof(WaterfallDialog);
         }
 
 
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            //var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
-            await stepContext.Context.SendActivityAsync(IntroStepMsgText, cancellationToken: cancellationToken);
+            var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
+
+            await stepContext.Context.SendActivityAsync(message, cancellationToken);
 
             var dateNow = DateOnly.FromDateTime(DateTime.Now);
+
             CultureInfo culture = new CultureInfo("es-MX");
 
-
-
-            Debug.WriteLine(dateNow.ToString("dddd", culture));
-
-
-            return await stepContext.BeginDialogAsync("flow1", stepContext.Options, cancellationToken: cancellationToken);
+            return await stepContext.NextAsync(cancellationToken: cancellationToken);
         }
 
         private async Task<DialogTurnResult> UsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -115,6 +75,7 @@ namespace MyBotConversational.Dialog
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
 
             var promptMessage = MessageFactory.Text(UsernameUsuarioStepMsgText, UsernameUsuarioStepMsgText, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
@@ -122,7 +83,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> VerifyUsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("-CITTT" + citaRDetalles.username);
             citaRDetalles.username = (string)stepContext.Result;
 
 
@@ -141,158 +101,41 @@ namespace MyBotConversational.Dialog
 
             if (usuario == null)
             {
-                Debug.WriteLine("1---------------------------------------");
-                Debug.WriteLine("1---------------------------------------");
-                citaRDetalles.tipoInteraccion = 2;
-                return await stepContext.ReplaceDialogAsync("flow2", stepContext.Options, cancellationToken: cancellationToken);
+
+                stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 2;
 
             }
             else
             {
                 citaRDetalles.idUsuario = usuario.id;
                 citaRDetalles.username = usuario.username;
-                citaRDetalles.tipoInteraccion = 1;
-                return await stepContext.ReplaceDialogAsync("flow3", stepContext.Options, cancellationToken: cancellationToken);
             }
 
 
 
 
-            //return await stepContext.NextAsync(citaRDetalles.username, cancellationToken);
-        }
-
-
-        private async Task<DialogTurnResult> VerifyBeforeFinishStep(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            var card = new HeroCard
-            {
-                Text = "Se verificó que su usuario es inválido, sin embargo hay 2 opciones a manejar para la gestión del registro",
-                /*Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }*/
-
-            };
-
-            var reply = MessageFactory.Attachment(card.ToAttachment());
-
-
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
-
-
-
-            var listaOpciones = new List<Choice>();
-
-            var cardAction = new CardAction();
-            cardAction.Title = "1";
-            cardAction.Value = "1";
-            cardAction.Type = "imBack";
-
-            listaOpciones.Add(new Choice()
-            {
-                Value = "1",
-                Action = cardAction,
-
-            });
-
-            var cardAction2 = new CardAction();
-            cardAction2.Title = "2";
-            cardAction2.Value = "2";
-            cardAction2.Type = "imBack";
-
-            listaOpciones.Add(new Choice()
-            {
-                Value = "2",
-                Action = cardAction2,
-
-            });
-
-
-
-            var promptMessage = MessageFactory.Text("Seleccione entre la opción 1 u 2 para gestionar la reserva", "Seleccione entre la opción 1 u 2 para gestionar la reserva", InputHints.ExpectingInput);
-            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions
-            {
-                Prompt = promptMessage,
-                Choices = listaOpciones,
-                Style = ListStyle.HeroCard
-            }, cancellationToken: cancellationToken);
-        }
-
-
-        private async Task<DialogTurnResult> VerifyFinishStep(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            string a = ((FoundChoice)stepContext.Result).Value;
-            if (long.Parse(a) == 1)
-            {
-                return await stepContext.ReplaceDialogAsync("flow1", stepContext.Options, cancellationToken: cancellationToken);
-            }
-
-
-            return await stepContext.ReplaceDialogAsync("flow5", stepContext.Options, cancellationToken: cancellationToken);
+            return await stepContext.NextAsync(citaRDetalles.username, cancellationToken);
         }
 
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            //citaRDetalles.username = (string)stepContext.Result;
+            citaRDetalles.username = (string)stepContext.Result;
 
-            if (citaRDetalles.tipoInteraccion == 2)
+            HttpRequestMessage msg = new HttpRequestMessage
             {
-                citaRDetalles.username = "nicole07";
-                HttpRequestMessage msg = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/token/usuario/generarConUserAdmin/{citaRDetalles.username}/{citaRDetalles.temporalEmail}"),
-                };
-
-                var response = await _httpClient.SendAsync(msg);
-
-                var content = await ValidateContent(response).ReadAsStringAsync();
-
-                var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                citaRDetalles.idUsuario = tokenresult.usuario.id;
-
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
-
-            }
-            else
-            {
-                HttpRequestMessage msg = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/token/usuario/generar/{citaRDetalles.username}"),
-                };
-
-                var response = await _httpClient.SendAsync(msg);
-
-                var content = await ValidateContent(response).ReadAsStringAsync();
-
-                var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
-
-            }
-
-
-
-
-
-            var card = new HeroCard
-            {
-                Text = "Se está gestionando su token, espere un momento :) ",
-                /*Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }*/
-
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/generar/{citaRDetalles.username}"),
             };
 
-            var reply = MessageFactory.Attachment(card.ToAttachment());
+            var response = await _httpClient.SendAsync(msg);
 
+            var content = await ValidateContent(response).ReadAsStringAsync();
 
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
-
+            var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
             var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
@@ -300,7 +143,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> VerifyTokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("El id usuario es -> " + citaRDetalles.idUsuario);
 
             var token = (string)stepContext.Result;
 
@@ -308,7 +150,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaRDetalles.idUsuario}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/token/usuario/{token}/{citaRDetalles.idUsuario}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -317,19 +159,15 @@ namespace MyBotConversational.Dialog
 
             var isVerifyToken = JsonSerializer.Deserialize<object>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Está verificado ? " + isVerifyToken + " con tipo de dato ");
-
             var boolResutlToken = Convert.ToBoolean(isVerifyToken.ToString());
-
 
             if (!boolResutlToken)
             {
-                Debug.WriteLine("2---------------------------------------");
-                return await stepContext.ReplaceDialogAsync("flow0", stepContext.Options, cancellationToken);
+                stepContext.ActiveDialog.State["stepIndex"] = (int)stepContext.ActiveDialog.State["stepIndex"] - 5;
 
             }
 
-            return await stepContext.ReplaceDialogAsync("flow4", stepContext.Options, cancellationToken);
+            return await stepContext.NextAsync(citaRDetalles.idUsuario, cancellationToken);
 
         }
 
@@ -344,7 +182,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/mascota/usuario/{citaRDetalles.username}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/mascota/usuario/{citaRDetalles.username}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -369,6 +207,7 @@ namespace MyBotConversational.Dialog
 
                 listaOpciones.Add(new Choice()
                 {
+                    //Value = mascotas[i].id.ToString(),
                     Value = JsonSerializer.Serialize<Mascota>(mascotas[i]),
                     Action = cardAction
                 });
@@ -399,7 +238,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://rimberiobackmejorado-production.up.railway.app/rimbeiro/especialidades"),
+                RequestUri = new Uri("https://rimberioback-production.up.railway.app/rimbeiro/especialidades"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -443,7 +282,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/veterinario/especialidad/{citaRDetalles.idEspecialidad}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/veterinario/especialidad/{citaRDetalles.idEspecialidad}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -475,8 +314,8 @@ namespace MyBotConversational.Dialog
 
             var Texto = $"Veterinarios que gestionan esa especialidad, escoge a cualquiera de ellos";
 
-
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
         }
 
@@ -495,7 +334,7 @@ namespace MyBotConversational.Dialog
             HttpRequestMessage msg = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($@"https://rimberiobackmejorado-production.up.railway.app/rimbeiro/horarios/veterinario/{citaRDetalles.veterinario.id}"),
+                RequestUri = new Uri($@"https://rimberioback-production.up.railway.app/rimbeiro/horarios/veterinario/{citaRDetalles.veterinario.id}"),
             };
 
             var response = await _httpClient.SendAsync(msg);
@@ -525,8 +364,8 @@ namespace MyBotConversational.Dialog
             var Texto = $"Tenemos disponible los siguientes horarios para ese servicio, seleccione uno de ellos";
 
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
 
+            return await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions { Prompt = promptMessage, Choices = listaOpciones, Style = ListStyle.HeroCard }, cancellationToken);
         }
 
         private async Task<DialogTurnResult> FechaStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -538,73 +377,10 @@ namespace MyBotConversational.Dialog
             var Texto = $"Dígite la fecha de la reserva con el siguiente formato año-mes-dia / aaaa-mm-dd";
 
             var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
+
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private async Task<DialogTurnResult> GetEmailTemporalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-
-
-            var Texto = $"Inserte el email temporal";
-
-            var promptMessage = MessageFactory.Text(Texto, Texto, InputHints.ExpectingInput);
-            return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
-
-        }
-
-        private async Task<DialogTurnResult> SetEmailTemporalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            citaRDetalles.temporalEmail = (string)stepContext.Result;
-
-
-            return await stepContext.ReplaceDialogAsync("flow3", stepContext.Options, cancellationToken: cancellationToken);
-
-        }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -614,11 +390,12 @@ namespace MyBotConversational.Dialog
 
             citaRDetalles.fecha = (string)stepContext.Result;
 
-
             var messageText = $"Por favor confirma, el nombre del usuario es ->  {citaRDetalles.username} , la mascota es -> {citaRDetalles.mascota.nombre} y la fecha de la reserva es -> {citaRDetalles.fecha}. ¿Es correcto?";
+
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
 
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
+
         }
 
         private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -653,11 +430,11 @@ namespace MyBotConversational.Dialog
             return await stepContext.EndDialogAsync(null, cancellationToken);
         }
 
-
         private static bool IsAmbiguous(string timex)
         {
             var timexProperty = new TimexProperty(timex);
             return !timexProperty.Types.Contains(Constants.TimexTypes.DateTime);
+
         }
 
 
