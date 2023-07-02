@@ -92,8 +92,6 @@ namespace MyBotConversational.Dialog
             });
             AddDialog(emailTemporal);
 
-
-            // The initial child Dialog to run.
             InitialDialogId = "flow0";
         }
 
@@ -101,7 +99,6 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            //var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
             await stepContext.Context.SendActivityAsync(IntroStepMsgText, cancellationToken: cancellationToken);
 
             var dateNow = DateOnly.FromDateTime(DateTime.Now);
@@ -163,17 +160,6 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> VerifyBeforeFinishStep(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            /*var card = new HeroCard
-            {
-                Text = "Se verificó que su usuario es inválido, sin embargo hay 2 opciones a manejar para la gestión del registro",
-                Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }
-
-            };
-
-            var reply = MessageFactory.Attachment(card.ToAttachment());*/
-
 
             await stepContext.Context.SendActivityAsync($@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.", cancellationToken: cancellationToken);
 
@@ -234,7 +220,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            //citaRDetalles.username = (string)stepContext.Result;
 
             if (citaRDetalles.tipoInteraccion == 2)
             {
@@ -252,7 +237,6 @@ namespace MyBotConversational.Dialog
                 var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
                 citaRDetalles.idUsuario = tokenresult.usuario.id;
 
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
 
             }
             else
@@ -269,27 +253,11 @@ namespace MyBotConversational.Dialog
 
                 var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
 
             }
 
 
-
-
-
-            var card = new HeroCard
-            {
-                Text = "Se está gestionando su token, espere un momento :) ",
-                /*Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }*/
-
-            };
-
-            var reply = MessageFactory.Attachment(card.ToAttachment());
-
-
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("Se está gestionando su token, espere un momento :)", cancellationToken: cancellationToken);
 
 
             var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
@@ -502,9 +470,6 @@ namespace MyBotConversational.Dialog
 
             citaRDetalles.veterinario = JsonSerializer.Deserialize<Veterinario>(((FoundChoice)stepContext.Result).Value);
 
-
-
-            Debug.WriteLine("El id del veterinario es " + citaRDetalles.idVeterinario);
 
 
             HttpRequestMessage msg = new HttpRequestMessage

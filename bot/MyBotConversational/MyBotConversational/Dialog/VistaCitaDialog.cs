@@ -93,7 +93,6 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            //var message = MessageFactory.Text(IntroStepMsgText, IntroStepMsgText, InputHints.ExpectingInput);
             await stepContext.Context.SendActivityAsync(IntroStepMsgText, cancellationToken: cancellationToken);
 
             var dateNow = DateOnly.FromDateTime(DateTime.Now);
@@ -152,17 +151,6 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> VerifyBeforeFinishStep(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            /*var card = new HeroCard
-           {
-               Text = $@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.",
-              Images = new CardImage[] {
-                   new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-               }
-
-           };
-
-           var reply = MessageFactory.Attachment(card.ToAttachment());*/
-
 
             await stepContext.Context.SendActivityAsync($@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.", cancellationToken: cancellationToken);
 
@@ -223,7 +211,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> TokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaVDetalles = (CitaVDetalles)stepContext.Options;
-            //citaRDetalles.username = (string)stepContext.Result;
 
             if (citaVDetalles.tipoInteraccion == 2)
             {
@@ -261,27 +248,6 @@ namespace MyBotConversational.Dialog
                 Debug.WriteLine("Este es mi token " + tokenresult.token);
 
             }
-
-
-
-
-
-            /*var card = new HeroCard
-            {
-                Text = "Se está gestionando su token, espere un momento :) ",
-                Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }
-
-            };
-
-            var attachments = new List<Attachment>()
-            {
-                card.ToAttachment()
-
-            };
-
-            var reply = MessageFactory.Carousel(attachments);*/
 
 
             await stepContext.Context.SendActivityAsync("Se está gestionando su token, espere un momento :)", cancellationToken: cancellationToken);
@@ -391,7 +357,6 @@ namespace MyBotConversational.Dialog
 
             HttpRequestMessage msg = new HttpRequestMessage
             {
-                //https://rimberiobackmejorado-production.up.railway.app/rimbeiro/especialidades
                 Method = HttpMethod.Get,
                 RequestUri = new Uri($@"http{_config.GetValue<string>("backendUrl")}/rimbeiro/reservasMascota/{citaVDetalles.mascota.id}"),
             };
@@ -403,27 +368,13 @@ namespace MyBotConversational.Dialog
             List<Reservacion> reservas = JsonSerializer.Deserialize<List<Reservacion>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
 
-            //var attachments = new List<Attachment>();
             for (int i = 0; i < reservas.Count; i++)
             {
                 var estado = reservas[i].estado ? "Activo" : "Inactivo";
 
-                /*attachments.Add(
-                    new HeroCard()
-                    {
-                        Text = $@"Nombre : {reservas[i].mascota.nombre} {Environment.NewLine} La fecha es :  {reservas[i].fecha}{Environment.NewLine}   La hora es :  {reservas[i].hora} {Environment.NewLine} Disponibilidad : {estado}",
-                        Title = $@"Reserva N° {i + 1}",
-                        Subtitle = $@"Veterinario {reservas[i].veterinario.nombres}"
-                        /*Images = new CardImage[] {
-                            new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                        }
-                    }.ToAttachment()
-                );*/
+
                 await stepContext.Context.SendActivityAsync($@"Nombre : {reservas[i].mascota.nombre} {Environment.NewLine} La fecha es :  {reservas[i].fecha}{Environment.NewLine}   La hora es :  {reservas[i].hora} {Environment.NewLine} Disponibilidad : {estado}", cancellationToken: cancellationToken);
             }
-
-
-            //var reply = MessageFactory.Carousel(attachments);
 
 
 
