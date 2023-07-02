@@ -266,12 +266,12 @@ namespace MyBotConversational.Dialog
 
 
 
-            var card = new HeroCard
+            /*var card = new HeroCard
             {
                 Text = "Se está gestionando su token, espere un momento :) ",
-                /*Images = new CardImage[] {
+                Images = new CardImage[] {
                     new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }*/
+                }
 
             };
 
@@ -281,10 +281,10 @@ namespace MyBotConversational.Dialog
 
             };
 
-            var reply = MessageFactory.Carousel(attachments);
+            var reply = MessageFactory.Carousel(attachments);*/
 
 
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("Se está gestionando su token, espere un momento :)", cancellationToken: cancellationToken);
 
 
             var promptMessage = MessageFactory.Text(TokenStepMsgText, TokenStepMsgText, InputHints.ExpectingInput);
