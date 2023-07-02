@@ -152,19 +152,20 @@ namespace MyBotConversational.Dialog
 
         private async Task<DialogTurnResult> VerifyBeforeFinishStep(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var card = new HeroCard
-            {
-                Text = $@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.",
-                /*Images = new CardImage[] {
-                    new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                }*/
+            /*var card = new HeroCard
+           {
+               Text = $@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.",
+              Images = new CardImage[] {
+                   new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
+               }
 
-            };
+           };
 
-            var reply = MessageFactory.Attachment(card.ToAttachment());
+           var reply = MessageFactory.Attachment(card.ToAttachment());*/
 
 
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync($@"Se verificó que el usuario ingresado no se encuentra registrado, sin embargo hay 2 opciones a manejar para la gestión del registro. {Environment.NewLine}{Environment.NewLine} La primera opción es para volver a iniciar sesión con un usuario válido. {Environment.NewLine}{Environment.NewLine} La segunda opción es para iniciar sesión con un usuario predeterminado, sin embargo tiene la posibilidad de colocar su correo eléctronico personalizado.", cancellationToken: cancellationToken);
+
 
 
 
