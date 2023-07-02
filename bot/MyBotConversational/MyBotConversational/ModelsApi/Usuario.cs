@@ -21,6 +21,8 @@ namespace MyBotConversational.ModelsApi
 
         public List<Authority> authorities { get; set; }
 
+        public List<UsuarioRol> usuarioRoles { get; set; }
+
 
     }
 }

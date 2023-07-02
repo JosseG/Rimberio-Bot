@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using MyBotConversational.ModelsApi;
+using System;
 
 namespace MyBotConversational
 {
@@ -19,11 +20,20 @@ namespace MyBotConversational
 
         public Horario horario { get; set; }
 
-        public string nombreServicio { get; set; }
 
         public long idEspecialidad { get; set; }
         public long idVeterinario { get; set; }
 
+        public long idMascota { get; set; }
+        public long idHorario { get; set; }
+
+        public string hora { get; set; }
+
+        public long idFecha { get; set; }
+
+        public long tipoInteraccion { get; set; }
+
+        public string temporalEmail { get; set; }
 
     }
 }
