@@ -403,11 +403,12 @@ namespace MyBotConversational.Dialog
             List<Reservacion> reservas = JsonSerializer.Deserialize<List<Reservacion>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
 
-            var attachments = new List<Attachment>();
+            //var attachments = new List<Attachment>();
             for (int i = 0; i < reservas.Count; i++)
             {
                 var estado = reservas[i].estado ? "Activo" : "Inactivo";
-                attachments.Add(
+
+                /*attachments.Add(
                     new HeroCard()
                     {
                         Text = $@"Nombre : {reservas[i].mascota.nombre} {Environment.NewLine} La fecha es :  {reservas[i].fecha}{Environment.NewLine}   La hora es :  {reservas[i].hora} {Environment.NewLine} Disponibilidad : {estado}",
@@ -415,19 +416,18 @@ namespace MyBotConversational.Dialog
                         Subtitle = $@"Veterinario {reservas[i].veterinario.nombres}"
                         /*Images = new CardImage[] {
                             new CardImage(url: $"https://i.postimg.cc/HnRypyMX/Mesa-de-trabajo-1.png"),
-                        }*/
+                        }
                     }.ToAttachment()
-                );
+                );*/
+                await stepContext.Context.SendActivityAsync($@"Nombre : {reservas[i].mascota.nombre} {Environment.NewLine} La fecha es :  {reservas[i].fecha}{Environment.NewLine}   La hora es :  {reservas[i].hora} {Environment.NewLine} Disponibilidad : {estado}", cancellationToken: cancellationToken);
             }
 
 
+            //var reply = MessageFactory.Carousel(attachments);
 
 
 
 
-            var reply = MessageFactory.Carousel(attachments);
-
-            await stepContext.Context.SendActivityAsync(reply, cancellationToken: cancellationToken);
             return await stepContext.NextAsync(stepContext, cancellationToken: cancellationToken);
         }
 
