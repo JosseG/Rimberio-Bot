@@ -2,6 +2,7 @@
 
 Bot gestor de procesos tales como registro y lectura de citas para la veterinaria Rimberio, además posee integración con el modelo de inteligencia artificial conversacional GPT 3.
 
+<br>
 
 ![Rimberio 1° conversación](rimberio1.png "Chat 1").
 ![Rimberio 2° conversación](rimberio2.png "Chat 2").
