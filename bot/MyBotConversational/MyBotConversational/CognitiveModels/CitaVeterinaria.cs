@@ -41,8 +41,6 @@ namespace MyBotConversational.CognitiveModels
             var jsonResult = JsonConvert.SerializeObject(result, new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
             var app = JsonConvert.DeserializeObject<CitaVeterinaria>(jsonResult);
 
-            Debug.WriteLine("Convirtiendoo");
-
             Text = app.Text;
             AlteredText = app.AlteredText;
             Intents = app.Intents;
@@ -62,7 +60,6 @@ namespace MyBotConversational.CognitiveModels
                     max = entry.Value.Score.Value;
                 }
             }
-            Debug.WriteLine("Obteniendo top intent");
 
             return (maxIntent, max);
         }

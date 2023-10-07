@@ -228,8 +228,6 @@ namespace MyBotConversational.Dialog
                 var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
                 citaVDetalles.idUsuario = tokenresult.usuario.id;
 
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
-
             }
             else
             {
@@ -245,7 +243,6 @@ namespace MyBotConversational.Dialog
 
                 var tokenresult = JsonSerializer.Deserialize<TokenBot>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-                Debug.WriteLine("Este es mi token " + tokenresult.token);
 
             }
 

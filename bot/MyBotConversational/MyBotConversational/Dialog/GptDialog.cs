@@ -71,14 +71,12 @@ namespace MyBotConversational.Dialog
                 max_tokens = 500
             };
             var serializado = JsonConvert.SerializeObject(parameters).ToString();
-            Debug.WriteLine(serializado);
             var content = new StringContent(JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json");
             requestMessage.Content = content; 
 
             var responsegpt = await _httpClient.SendAsync(requestMessage).ConfigureAwait(true);
                 
             string responsetext = await responsegpt.Content.ReadAsStringAsync().ConfigureAwait(true);
-            Debug.WriteLine(responsetext);
             dynamic responseObject = JsonConvert.DeserializeObject(responsetext);
             string generatedText = responseObject.choices[0].text;
             return generatedText;

@@ -1,4 +1,4 @@
-﻿using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Choices;
 using Microsoft.Bot.Schema;
@@ -105,10 +105,6 @@ namespace MyBotConversational.Dialog
             CultureInfo culture = new CultureInfo("es-MX");
 
 
-
-            Debug.WriteLine(dateNow.ToString("dddd", culture));
-
-
             return await stepContext.BeginDialogAsync("flow1", stepContext.Options, cancellationToken: cancellationToken);
         }
 
@@ -124,7 +120,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> VerifyUsernameUsuarioStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("-CITTT" + citaRDetalles.username);
             citaRDetalles.username = (string)stepContext.Result;
 
 
@@ -268,7 +263,6 @@ namespace MyBotConversational.Dialog
         private async Task<DialogTurnResult> VerifyTokenStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
-            Debug.WriteLine("El id usuario es -> " + citaRDetalles.idUsuario);
 
             var token = (string)stepContext.Result;
 
@@ -285,14 +279,11 @@ namespace MyBotConversational.Dialog
 
             var isVerifyToken = JsonSerializer.Deserialize<object>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
-            Debug.WriteLine("Está verificado ? " + isVerifyToken + " con tipo de dato ");
-
             var boolResutlToken = Convert.ToBoolean(isVerifyToken.ToString());
 
 
             if (!boolResutlToken)
             {
-                Debug.WriteLine("2---------------------------------------");
                 return await stepContext.ReplaceDialogAsync("flow0", stepContext.Options, cancellationToken);
 
             }
@@ -322,8 +313,6 @@ namespace MyBotConversational.Dialog
             List<Mascota> mascotas = JsonSerializer.Deserialize<List<Mascota>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 
 
-
-            string listastringmascotas = "";
             var listaOpciones = new List<Choice>();
 
             for (int i = 0; i < mascotas.Count; i++)
@@ -333,14 +322,12 @@ namespace MyBotConversational.Dialog
                 cardAction.Value = mascotas[i].nombre;
                 cardAction.Type = "imBack";
 
-
-
                 listaOpciones.Add(new Choice()
                 {
                     Value = JsonSerializer.Serialize<Mascota>(mascotas[i]),
                     Action = cardAction
                 });
-                listastringmascotas = listastringmascotas + " " + mascotas[i].nombre;
+
             }
 
 
@@ -491,7 +478,6 @@ namespace MyBotConversational.Dialog
 
             for (int i = 0; i < horarios.Count; i++)
             {
-                Debug.WriteLine(horarios[i].id);
                 var cardAction = new CardAction();
                 cardAction.Title = horarios[i].horaInicio + " - " + horarios[i].horaFin;
                 cardAction.Value = horarios[i].horaInicio + " - " + horarios[i].horaFin;
@@ -514,7 +500,6 @@ namespace MyBotConversational.Dialog
         {
             var citaRDetalles = (CitaRDetalles)stepContext.Options;
             citaRDetalles.horario = JsonSerializer.Deserialize<Horario>(((FoundChoice)stepContext.Result).Value);
-            Debug.WriteLine(citaRDetalles.horario.id);
 
             var Texto = $"Dígite la fecha de la reserva con el siguiente formato año-mes-dia / aaaa-mm-dd";
 
@@ -594,7 +579,6 @@ namespace MyBotConversational.Dialog
 
                 var response = await _httpClient.SendAsync(msg);
 
-                Debug.WriteLine("La respuesta " + response);
 
                 return await stepContext.EndDialogAsync(citaRDetalles, cancellationToken);
             }

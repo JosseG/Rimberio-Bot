@@ -102,8 +102,6 @@ namespace MyBotConversational.Clu
             using JsonDocument result = JsonDocument.Parse(cluResponse.ContentStream);
             var recognizerResult = RecognizerResultBuilder.BuildRecognizerResultFromCluResponse(result, utterance);
 
-            Debug.WriteLine(" RESULT --------- "+ recognizerResult.Properties.Values.ToString());
-
             var traceInfo = JObject.FromObject(
                 new
                 {
