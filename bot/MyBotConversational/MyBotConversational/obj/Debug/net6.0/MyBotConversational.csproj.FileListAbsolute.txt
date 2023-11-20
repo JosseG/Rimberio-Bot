@@ -1,280 +1,350 @@
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-AzureBot-with-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-BotApp-with-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-AzureBot-with-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-BotApp-with-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-AzureBot-new-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-BotApp-new-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-AzureBot-new-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-BotApp-new-rg.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.staticwebassets.runtime.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.exe
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.deps.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.runtimeconfig.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.AI.Language.Conversations.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Azure.Services.AppAuthentication.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Dialogs.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Integration.AspNet.Core.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Configuration.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.Streaming.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Schema.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Streaming.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Definitions.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Choice.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DateTime.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Number.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.NumberWithUnit.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.AssemblyReference.cache
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfoInputs.cache
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfo.cs
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CoreCompileInputs.cache
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.build.MyBotConversational.props
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyBotConversational.props
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyBotConversational.props
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\scopedcss\bundle\MyBotConversational.styles.css
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CopyComplete
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\refint\MyBotConversational.dll
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.genruntimeconfig.cache
-C:\Users\Jose\source\repos\MyBotConversational\MyBotConversational\obj\Debug\net6.0\ref\MyBotConversational.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.staticwebassets.runtime.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.exe
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.deps.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.runtimeconfig.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.AI.Language.Conversations.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Azure.Services.AppAuthentication.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Dialogs.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Integration.AspNet.Core.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Configuration.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.Streaming.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Schema.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Streaming.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Definitions.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Choice.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DateTime.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Number.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.NumberWithUnit.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.AssemblyReference.cache
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfoInputs.cache
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfo.cs
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CoreCompileInputs.cache
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.build.MyBotConversational.props
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyBotConversational.props
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyBotConversational.props
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\scopedcss\bundle\MyBotConversational.styles.css
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CopyComplete
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\refint\MyBotConversational.dll
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.genruntimeconfig.cache
-C:\Users\Jose\Desktop\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\ref\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.staticwebassets.runtime.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.exe
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.deps.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.runtimeconfig.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.AI.Language.Conversations.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Azure.Services.AppAuthentication.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Dialogs.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Integration.AspNet.Core.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Configuration.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.Streaming.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Schema.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Streaming.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Definitions.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Choice.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DateTime.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Number.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.NumberWithUnit.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.AssemblyReference.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfoInputs.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfo.cs
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CoreCompileInputs.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.build.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\scopedcss\bundle\MyBotConversational.styles.css
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CopyComplete
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\refint\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.genruntimeconfig.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-5\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\ref\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\parameters-for-template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-AzureBot-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployUseExistResourceGroup\template-BotApp-with-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\parameters-for-template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-AzureBot-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\DeploymentTemplates\DeployWithNewResourceGroup\template-BotApp-new-rg.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.staticwebassets.runtime.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.exe
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\appsettings.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.deps.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.runtimeconfig.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.AI.Language.Conversations.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Azure.Services.AppAuthentication.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Dialogs.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Builder.Integration.AspNet.Core.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Configuration.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Connector.Streaming.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Schema.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Bot.Streaming.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Definitions.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Choice.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.DateTime.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.Number.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Recognizers.Text.NumberWithUnit.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.AssemblyReference.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfoInputs.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.AssemblyInfo.cs
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CoreCompileInputs.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.build.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyBotConversational.props
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\scopedcss\bundle\MyBotConversational.styles.css
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.csproj.CopyComplete
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\refint\MyBotConversational.dll
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.pdb
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\MyBotConversational.genruntimeconfig.cache
-C:\Users\Jose\Desktop\Cibertec-Ciclo-6\Proyecto Integrador\Proyecto\BotProjectG1\bot\MyBotConversational\MyBotConversational\obj\Debug\net6.0\ref\MyBotConversational.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-AzureBot-with-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-BotApp-with-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-AzureBot-with-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-BotApp-with-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-AzureBot-new-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-BotApp-new-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-AzureBot-new-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-BotApp-new-rg.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.staticwebassets.runtime.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.exe
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.deps.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.runtimeconfig.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.AI.Language.Conversations.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.Core.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Azure.Services.AppAuthentication.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Dialogs.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Configuration.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.Streaming.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Schema.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Streaming.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Definitions.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Choice.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DateTime.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Number.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Rest.ClientRuntime.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.Memory.Data.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.AssemblyReference.cache
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfoInputs.cache
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfo.cs
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CoreCompileInputs.cache
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/scopedcss/bundle/MyBotConversational.styles.css
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CopyComplete
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/refint/MyBotConversational.dll
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.genruntimeconfig.cache
+C:/Users/Jose/source/repos/MyBotConversational/MyBotConversational/obj/Debug/net6.0/ref/MyBotConversational.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.staticwebassets.runtime.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.exe
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.deps.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.runtimeconfig.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.AI.Language.Conversations.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.Core.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Azure.Services.AppAuthentication.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Dialogs.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Configuration.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.Streaming.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Schema.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Streaming.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Definitions.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Choice.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DateTime.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Number.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Rest.ClientRuntime.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.Memory.Data.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.AssemblyReference.cache
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfoInputs.cache
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfo.cs
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CoreCompileInputs.cache
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/scopedcss/bundle/MyBotConversational.styles.css
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CopyComplete
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/refint/MyBotConversational.dll
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.genruntimeconfig.cache
+C:/Users/Jose/Desktop/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/ref/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.staticwebassets.runtime.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.exe
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.deps.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.runtimeconfig.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.AI.Language.Conversations.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.Core.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Azure.Services.AppAuthentication.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Dialogs.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Configuration.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.Streaming.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Schema.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Streaming.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Definitions.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Choice.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DateTime.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Number.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Rest.ClientRuntime.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.Memory.Data.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.AssemblyReference.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfoInputs.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfo.cs
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CoreCompileInputs.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/scopedcss/bundle/MyBotConversational.styles.css
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CopyComplete
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/refint/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.genruntimeconfig.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-5/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/ref/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-AzureBot-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-BotApp-with-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-AzureBot-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-BotApp-new-rg.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.staticwebassets.runtime.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.exe
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.deps.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.runtimeconfig.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.AI.Language.Conversations.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.Core.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Azure.Services.AppAuthentication.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Dialogs.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Configuration.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.Streaming.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Schema.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Streaming.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Definitions.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Choice.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DateTime.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Number.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Rest.ClientRuntime.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.Memory.Data.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.AssemblyReference.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfoInputs.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfo.cs
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CoreCompileInputs.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/scopedcss/bundle/MyBotConversational.styles.css
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CopyComplete
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/refint/MyBotConversational.dll
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.pdb
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.genruntimeconfig.cache
+C:/Users/Jose/Desktop/Cibertec-Ciclo-6/Proyecto Integrador/Proyecto/BotProjectG1/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/ref/MyBotConversational.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.Development.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-AzureBot-with-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/parameters-for-template-BotApp-with-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-AzureBot-with-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployUseExistResourceGroup/template-BotApp-with-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-AzureBot-new-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/parameters-for-template-BotApp-new-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-AzureBot-new-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/DeploymentTemplates/DeployWithNewResourceGroup/template-BotApp-new-rg.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.staticwebassets.runtime.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/appsettings.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.deps.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.runtimeconfig.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/MyBotConversational.pdb
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.AI.Language.Conversations.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Azure.Core.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Azure.Services.AppAuthentication.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Dialogs.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Configuration.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Connector.Streaming.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Schema.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Bot.Streaming.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Definitions.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Choice.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.DateTime.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.Number.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Recognizers.Text.NumberWithUnit.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Microsoft.Rest.ClientRuntime.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/bin/Debug/net6.0/System.Memory.Data.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.AssemblyReference.cache
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfoInputs.cache
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.AssemblyInfo.cs
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CoreCompileInputs.cache
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cs
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.MvcApplicationPartsAssemblyInfo.cache
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.build.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/staticwebassets.development.json
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/scopedcss/bundle/MyBotConversational.styles.css
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.csproj.CopyComplete
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/refint/MyBotConversational.dll
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.pdb
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/MyBotConversational.genruntimeconfig.cache
+/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/Debug/net6.0/ref/MyBotConversational.dll

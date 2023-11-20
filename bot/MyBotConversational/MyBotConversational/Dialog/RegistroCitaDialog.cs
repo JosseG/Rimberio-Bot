@@ -565,7 +565,7 @@ namespace MyBotConversational.Dialog
                 {
                     mascota = citaRDetalles.mascota,
                     veterinario = citaRDetalles.veterinario,
-                    fecha = citaRDetalles.fecha,
+                    fecha = DateTime.Parse(citaRDetalles.fecha).Date,
                     hora = citaRDetalles.horario.horaInicio
                 };
 

@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jose\\Desktop\\Rimberio-Bot\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {}
+    "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/MyBotConversational.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jose\\Desktop\\Rimberio-Bot\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj": {
+    "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/MyBotConversational.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Desktop\\Rimberio-Bot\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
+        "projectUniqueName": "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/MyBotConversational.csproj",
         "projectName": "MyBotConversational",
-        "projectPath": "C:\\Users\\Jose\\Desktop\\Rimberio-Bot\\bot\\MyBotConversational\\MyBotConversational\\MyBotConversational.csproj",
-        "packagesPath": "C:\\Users\\Jose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jose\\Desktop\\Rimberio-Bot\\bot\\MyBotConversational\\MyBotConversational\\obj\\",
+        "projectPath": "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/MyBotConversational.csproj",
+        "packagesPath": "/Users/jose/.nuget/packages/",
+        "outputPath": "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jose\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jose/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     }

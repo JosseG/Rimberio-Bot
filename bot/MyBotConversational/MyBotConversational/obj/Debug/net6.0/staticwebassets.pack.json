@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Jose\\Desktop\\Cibertec-Ciclo-6\\Proyecto Integrador\\Proyecto\\BotProjectG1\\bot\\MyBotConversational\\MyBotConversational\\wwwroot\\default.htm",
-      "PackagePath": "staticwebassets\\default.htm"
+      "Id": "/Users/jose/Desktop/Rimberio-Bot/bot/MyBotConversational/MyBotConversational/wwwroot/default.htm",
+      "PackagePath": "staticwebassets/default.htm"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.MyBotConversational.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MyBotConversational.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.MyBotConversational.props",
       "PackagePath": "build\\MyBotConversational.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MyBotConversational.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MyBotConversational.props",
       "PackagePath": "buildMultiTargeting\\MyBotConversational.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MyBotConversational.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MyBotConversational.props",
       "PackagePath": "buildTransitive\\MyBotConversational.props"
     }
   ],
